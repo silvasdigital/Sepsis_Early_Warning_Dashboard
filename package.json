@@ -1,0 +1,39 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "a JS project for API / Promises / async await practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack serve --open --config webpack.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Silva-Mo/weather-app"
+  },
+  "author": "Silva-Mo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Silva-Mo/weather-app/issues"
+  },
+  "homepage": "https://github.com/Silva-Mo/weather-app#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.32.0",
+    "copy-webpack-plugin": "^13.0.0",
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.2",
+    "eslint": "^9.32.0",
+    "glob": "^11.0.3",
+    "globals": "^16.3.0",
+    "html-loader": "^5.0.0",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "prettier": "3.6.2",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.92.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4",
+    "webpack-merge": "^5.10.0"
+  }
+}
