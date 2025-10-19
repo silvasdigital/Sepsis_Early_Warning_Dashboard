@@ -1,7 +1,7 @@
 {
-  "name": "weather-app",
+  "name": "sepsis-dashboard",
   "version": "1.0.0",
-  "description": "a JS project for API / Promises / async await practice",
+  "description": "An educational dashboard for early sepsis warning signs.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Silva-Mo/weather-app"
+    "url": "git+https://github.com/silvasdigital/Sepsis_Early_Warning_Dashboard"
   },
   "author": "Silva-Mo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Silva-Mo/weather-app/issues"
+    "url": "https://github.com/silvasdigital/Sepsis_Early_Warning_Dashboard/issues"
   },
-  "homepage": "https://github.com/Silva-Mo/weather-app#readme",
+  "homepage": "https://github.com/silvasdigital/Sepsis_Early_Warning_Dashboard#readme",
   "devDependencies": {
     "@eslint/js": "^9.32.0",
     "copy-webpack-plugin": "^13.0.0",
@@ -35,5 +35,8 @@
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4",
     "webpack-merge": "^5.10.0"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.3"
   }
 }

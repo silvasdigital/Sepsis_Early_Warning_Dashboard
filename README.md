@@ -1,44 +1,52 @@
-# Weather App
+# Sepsis Early Warning Dashboard (Educational v1)
 
-## Result
+This project is an educational web-based dashboard designed to teach healthcare students and professionals about the early warning signs of sepsis using the qSOFA (Quick Sequential Organ Failure Assessment) score.
 
-![preview page](./src/imgs/preview.png)  
-[LIVE DEMO](https://silva-mo.github.io/weather-app)
+The dashboard simulates different patient scenarios to demonstrate how changes in vital signs and lab results can indicate a rising risk of sepsis.
 
-## About
+## ✨ Features
 
-This is my fourth JavaScript project from **The Odin Project** curriculum — a fully functional **Weather App**.  
-It deepened my skills in **API handling**, **asynchronous JavaScript** (`async/await` & Promises), and improved my approach to **frontend UI handling**.  
-I also implemented **loading components** and basic **frontend error handling** for a better user experience.
+- **Dynamic Status Updates:** The main status card changes color and text based on the calculated risk.
+- **qSOFA Score Calculation:** Automatically calculates and displays the qSOFA score based on patient vitals.
+- **Clear Data Visualization:** Presents patient information, vitals, and lab results in easy-to-read cards.
+- **Interactive Scenarios:** Buttons allow users to load different patient profiles (Normal, At-Risk, Sepsis Alert) to see the dashboard in action.
+- **Heart Rate Trend:** Includes a simple chart to visualize the patient's heart rate over the last few hours.
+- **Modern Tech Stack:** Built with HTML, CSS, and JavaScript, and bundled with Webpack.
 
-Alhamdulillah
+## 🚀 Getting Started
 
-## What was needed to complete it:
+Follow these instructions to get a copy of the project up and running on your local machine.
 
-- Fetching and processing data from a public Weather API
-- Using **`async/await`** and **Promises** for clean asynchronous code
-- Integrating the **Geolocation API** to get user location-based weather
-- Adding **loading components** during data fetch
-- Handling simple frontend errors for failed API requests
-- Using **dynamic imports** for efficient code splitting
-- Creating a responsive and visually appealing UI
+### Prerequisites
 
-## Challenges that I’ve overcome:
+You need to have [Node.js](https://nodejs.org/) and npm (which comes with Node.js) installed on your system.
 
-- Working with the **Geolocation API** while managing user permissions and errors
-- Implementing **dynamic imports** without breaking the Webpack build
-- Ensuring smooth loading states and clear error messages
-- Handling asynchronous code in a modular, maintainable way
-- Making the UI responsive and consistent across devices
+### Installation & Setup
 
-## Tech Stack
+1.  **Clone the repository:**
 
-- JavaScript (ES6)
-- HTML5
-- CSS3 (Flexbox & Grid)
-- Webpack
-- Weather API
+    ```bash
+    git clone <your-repository-url>
+    cd sepsis-dashboard
+    ```
 
----
+2.  **Install dependencies:**
+    This command will install all the necessary packages defined in `package.json`.
+    ```bash
+    npm install
+    ```
 
-✅ Built with care — feel free to explore or contribute!
+### Running the Application
+
+- **For Development:**
+  This command starts a live development server. It will automatically open the dashboard in your browser and reload the page whenever you make changes to the source files.
+
+  ```bash
+  npm run start
+  ```
+
+- **For Production:**
+  This command builds an optimized version of the application, ready for deployment. The optimized files will be placed in the `/dist` directory.
+  ```bash
+  npm run build
+  ```
