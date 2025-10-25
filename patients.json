@@ -1,0 +1,48 @@
+{
+  "patients": [
+    {
+      "info": {
+        "id": "P001",
+        "name": "Jane Doe (Normal)",
+        "age": 55,
+        "gender": "Female"
+      },
+      "vitals": { "hr": 75, "rr": 16, "sbp": 120, "temp": 37.0, "ams": false },
+      "labs": { "wbc": 8.5, "lactate": 1.1, "crp": 5 },
+      "hrHistory": [78, 76, 75, 77, 75]
+    },
+    {
+      "info": {
+        "id": "P002",
+        "name": "Robert Smith (At-Risk)",
+        "age": 68,
+        "gender": "Male"
+      },
+      "vitals": { "hr": 95, "rr": 22, "sbp": 105, "temp": 37.9, "ams": false },
+      "labs": { "wbc": 12.5, "lactate": 1.8, "crp": 45 },
+      "hrHistory": [90, 92, 95, 93, 95]
+    },
+    {
+      "info": {
+        "id": "P003",
+        "name": "Michael Chen (Sepsis Alert)",
+        "age": 76,
+        "gender": "Male"
+      },
+      "vitals": { "hr": 110, "rr": 25, "sbp": 90, "temp": 38.5, "ams": true },
+      "labs": { "wbc": 18.2, "lactate": 4.2, "crp": 150 },
+      "hrHistory": [100, 105, 108, 112, 110]
+    },
+    {
+      "info": {
+        "id": "P004",
+        "name": "Ahmed Ibrahim",
+        "age": 30,
+        "gender": "male"
+      },
+      "vitals": { "hr": 75, "rr": 20, "sbp": 100, "temp": 37.0, "ams": false },
+      "labs": { "wbc": 8.5, "lactate": 1.1, "crp": 5 },
+      "hrHistory": [78, 76, 75, 77, 75]
+    }
+  ]
+}

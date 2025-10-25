@@ -22,6 +22,7 @@ body {
   color: var(--text-color);
   margin: 0;
   padding: 20px;
+  box-sizing: border-box; /* Ensures padding doesn't cause overflow */
 }
 
 header {
@@ -34,10 +35,8 @@ header h1 {
   color: var(--primary-color);
 }
 
-.dashboard-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+/* Replaced .dashboard-grid with centering on main */
+main {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -69,17 +68,19 @@ header h1 {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid var(--border-color);
+  flex-wrap: wrap; /* <-- FIX 1: Allows text to wrap on small screens */
+  gap: 5px; /* Adds a small gap if it wraps */
 }
 
 .card ul li:last-child {
   border-bottom: none;
 }
 
-/* Status Card */
-#status-card {
-  grid-column: 1 / -1; /* Span full width */
+/* Styles for full-width cards */
+#status-card,
+#patient-list-card {
   text-align: center;
-  transition: background-color 0.3s ease;
+  margin-bottom: 20px; /* Add spacing between cards */
 }
 
 #status-card h2 {
@@ -139,13 +140,57 @@ header h1 {
   background-color: var(--status-alert-text);
 }
 
-/* Controls */
-.controls .button-group {
+/* Patient List Card */
+#patient-list-card h2 {
+  border: none;
+}
+#patient-selector-container label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+#patient-select {
+  width: 100%;
+  max-width: 400px; /* Stop it from being too wide */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  margin: 0 auto; /* Center the select box */
+}
+
+/* This is the flexbox wrapper that centers the content cards */
+.card-deck {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
+  justify-content: center; /* This is the magic property! */
+  gap: 20px;
 }
+
+/* Styles for cards inside the new deck */
+.card-deck .card {
+  flex-basis: 300px; /* Each card will be at least 300px wide */
+  flex-grow: 1; /* They can grow to fill space */
+  max-width: 450px; /* But won't get too wide */
+  min-width: 0; /* Allows card to shrink below 300px if needed */
+}
+
+/* Updated Controls Card */
+.controls .import-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.controls input[type='file'] {
+  font-family: 'Roboto', sans-serif;
+  border: 1px solid var(--border-color);
+  padding: 8px;
+  border-radius: 5px;
+}
+
 .controls button {
   padding: 10px 15px;
   border: none;
@@ -159,7 +204,24 @@ header h1 {
 .controls button:hover {
   background-color: #0056b3;
 }
+.import-status {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+.import-status.success {
+  color: var(--status-normal-text);
+}
+.import-status.error {
+  color: var(--status-alert-text);
+}
 
 .chart-container {
   margin-top: 20px;
+  position: relative; /* <-- FIX 2: Added for chart.js */
+  width: 100%; /* <-- FIX 2: Ensures container scales */
+}
+
+.student-name {
+  color: #d9534f;
+  font-weight: bold;
 }
